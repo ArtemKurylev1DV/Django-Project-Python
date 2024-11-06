@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Электронная библиотека Артема Курылёва</title>
+    </head>
+    <body>
+        <p>Библиотечная система 0.01 alpha</p>
+		
+		{{ posts }}
+		
+		{% for post in posts %}
+			<div>
+				<p>Опубликовано: {{ post.published_date }}</p>
+				<h1><a href="">{{ post.title }}</a></h1>
+				<p>{{ post.text|linebreaksbr }}</p>
+				
+				<p><a href="">{{ post.title }}</a></p>
+				<p><a href="">{{ post.title }}</a></p>
+			</div>
+		{% endfor %}
+    </body>
+</html>
